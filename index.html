@@ -58,6 +58,19 @@
                 transform: translateY(0) rotate(-2deg);
             }
         }
+
+        /* Evaluation Modal */
+        #eval-modal {
+            transition: opacity 0.3s ease;
+        }
+        #eval-modal.hidden { display: none; }
+        #eval-modal-panel {
+            transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), opacity 0.35s ease;
+        }
+        #eval-modal.modal-enter #eval-modal-panel {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="bg-[#FAFAFA] text-slate-600 selection:bg-[#7f1d1d] selection:text-white">
@@ -75,7 +88,9 @@
                 <a href="#inicio" class="text-sm font-medium text-slate-600 hover:text-[#7f1d1d] transition-colors">Início</a>
                 <a href="#jornada" class="text-sm font-medium text-slate-600 hover:text-[#7f1d1d] transition-colors">Como Funciona</a>
                 <a href="#especialidades" class="text-sm font-medium text-slate-600 hover:text-[#7f1d1d] transition-colors">Especialidades</a>
+                <a href="#avaliacoes" class="text-sm font-medium text-slate-600 hover:text-[#7f1d1d] transition-colors">Avaliações</a>
                 <a href="#equipe" class="text-sm font-medium text-slate-600 hover:text-[#7f1d1d] transition-colors">Equipe</a>
+                <a href="#palestras" class="text-sm font-medium text-slate-600 hover:text-[#7f1d1d] transition-colors">Palestras</a>
             </div>
 
             <!-- CTA Button -->
@@ -111,7 +126,7 @@
                     </h1>
                     
                     <p class="text-lg text-slate-500 mb-10 leading-relaxed max-w-lg">
-                        Centro de referência em <strong>Neuropsicologia</strong> e <strong>Psicoterapia</strong> na Zona Sul de SP. Um olhar técnico e humano para diagnósticos precisos.
+                         Centro de referência em <strong>avaliações psicológicas na zona sul de São Paulo</strong>. Um olhar técnico, ético e humanos para diagnósticos precisos.
                     </p>
                     
                     <div class="flex flex-col sm:flex-row gap-4">
@@ -265,9 +280,9 @@
                     </div>
                     <div class="text-center px-4">
                         <span class="block text-xs font-bold text-slate-300 mb-2">ETAPA 01</span>
-                        <h4 class="text-lg font-serif font-medium text-slate-900 mb-2">Acolhimento</h4>
+                        <h4 class="text-lg font-serif font-medium text-slate-900 mb-2">Avaliar</h4>
                         <p class="text-sm text-slate-500 leading-relaxed">
-                            Entrevista inicial para compreender sua queixa e direcionar para o especialista mais adequado.
+                            fazer acompanhamento inicial para entender as queixas, histórico e expectativas do paciente, garantindo um acolhimento humanizado desde o primeiro contato.
                         </p>
                     </div>
                 </div>
@@ -279,9 +294,9 @@
                     </div>
                     <div class="text-center px-4">
                         <span class="block text-xs font-bold text-slate-300 mb-2">ETAPA 02</span>
-                        <h4 class="text-lg font-serif font-medium text-slate-900 mb-2">Mapeamento</h4>
+                        <h4 class="text-lg font-serif font-medium text-slate-900 mb-2">Cuidar</h4>
                         <p class="text-sm text-slate-500 leading-relaxed">
-                            Sessões de avaliação neuropsicológica ou diagnóstica para identificar a raiz das dificuldades.
+                            entrega do laudo tecnico, devolutiva explicativa sobre os caminhos a seguir, início da intervenção terapêutica ou reabilitação focada em autonomia e bem-estar.
                         </p>
                     </div>
                 </div>
@@ -293,9 +308,9 @@
                     </div>
                     <div class="text-center px-4">
                         <span class="block text-xs font-bold text-slate-300 mb-2">ETAPA 03</span>
-                        <h4 class="text-lg font-serif font-medium text-slate-900 mb-2">Clareza</h4>
+                        <h4 class="text-lg font-serif font-medium text-slate-900 mb-2">Evoluir</h4>
                         <p class="text-sm text-slate-500 leading-relaxed">
-                            Entrega de laudo técnico (se aplicável) e devolutiva explicativa sobre os caminhos a seguir.
+                            Transformação, inico da intervenção terapêutica ou reabilitação focada em autonomia e bem-estar.
                         </p>
                     </div>
                 </div>
@@ -384,20 +399,24 @@
                     </div>
                     <h3 class="text-2xl font-serif text-slate-900 mb-4">Neuropsicologia</h3>
                     <p class="text-slate-500 mb-8 leading-relaxed">
-                        Avaliação detalhada das funções cognitivas (memória, atenção, linguagem) para diagnóstico de TDAH, Autismo (TEA), Deficiência Intelectual e transtornos de aprendizagem.
+                        Avaliação detalhada das funções cognitivas (Quoeficiente de inteligência, atenção, linguagem, memória, praxia e funções executivas), para diagnóstico de transtornos do neurodesenvolvimento e  transtornos neurocognitivos.
                     </p>
                     <ul class="space-y-3 mb-8">
                         <li class="flex items-center gap-3 text-sm text-slate-600">
                             <iconify-icon icon="solar:check-circle-linear" class="text-[#d97706]"></iconify-icon>
-                            Avaliação para TDAH e TEA
+                            Laudo para  investigar autismo (TEA) , TDAH, Transtorno do Desenvolvimento Intelectual, entre outros .
                         </li>
                         <li class="flex items-center gap-3 text-sm text-slate-600">
                             <iconify-icon icon="solar:check-circle-linear" class="text-[#d97706]"></iconify-icon>
-                            Laudos para Escolas e Concursos
+                            Laudo para escolas- Transtorno Específico de Aprendizagem, entre outros. 
                         </li>
                         <li class="flex items-center gap-3 text-sm text-slate-600">
                             <iconify-icon icon="solar:check-circle-linear" class="text-[#d97706]"></iconify-icon>
-                            Reabilitação Cognitiva
+                            Laudo para investigar demências como Alzheimer, entre outros.
+                        </li>
+                        <li>
+                            <iconify-icon icon="solar:check-circle-linear" class="text-[#d97706]"></iconify-icon>
+                            Laudo para investigar defices cognitivos decorrentes de  Lesões Encefálicas Adquiridas (LEA)
                         </li>
                     </ul>
                 </div>
@@ -429,6 +448,159 @@
             </div>
         </div>
     </section>
+
+    <!-- Tipos de Avaliação Section -->
+    <section id="avaliacoes" class="py-24 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-[#d97706] font-semibold text-xs tracking-widest uppercase mb-2 block">Nossos Serviços</span>
+                <h2 class="text-4xl font-serif text-slate-900 mb-4 tracking-tight">Tipos de Avaliação</h2>
+                <p class="text-slate-500">Conheça as modalidades disponíveis em nossa clínica, desenvolvidas com rigor técnico e atenção individualizada.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+                <!-- Card 1 -->
+                <div class="group flex flex-col justify-between p-7 rounded-2xl border border-[#7f1d1d]/20 bg-[#fff8f8] hover:border-[#7f1d1d]/40 hover:bg-white hover:shadow-lg transition-all duration-300">
+                    <div>
+                        <div class="flex items-start justify-between mb-5">
+                            <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-[#7f1d1d] shadow-sm group-hover:scale-110 transition-transform duration-300">
+                                <iconify-icon icon="solar:health-linear" width="22"></iconify-icon>
+                            </div>
+                            <span class="inline-flex items-center gap-1 text-[10px] font-semibold text-[#7f1d1d] bg-[#7f1d1d]/8 px-2 py-1 rounded-full">
+                                <iconify-icon icon="solar:monitor-smartphone-linear" width="11"></iconify-icon>
+                                Também online
+                            </span>
+                        </div>
+                        <h3 class="text-base font-serif font-medium text-slate-900 leading-snug mb-1">Avaliação Neuropsicológica</h3>
+                        <p class="text-xs text-slate-400 mb-5">Infantil, adulto e idoso · Presencial ou remoto</p>
+                    </div>
+                    <button onclick="openEvalModal('neuropsico')" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#7f1d1d] hover:gap-3 transition-all duration-200">
+                        Ver mais <iconify-icon icon="solar:arrow-right-linear" width="14"></iconify-icon>
+                    </button>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group flex flex-col justify-between p-7 rounded-2xl border border-slate-100 bg-slate-50 hover:border-[#7f1d1d]/25 hover:bg-white hover:shadow-lg transition-all duration-300">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-[#7f1d1d] mb-5 shadow-sm group-hover:scale-110 transition-transform duration-300">
+                            <iconify-icon icon="solar:user-circle-linear" width="22"></iconify-icon>
+                        </div>
+                        <h3 class="text-base font-serif font-medium text-slate-900 leading-snug mb-1">Avaliação de Personalidade</h3>
+                        <p class="text-xs text-slate-400 mb-5">Com aplicação do teste Rorschach</p>
+                    </div>
+                    <button onclick="openEvalModal('personalidade')" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#7f1d1d] hover:gap-3 transition-all duration-200">
+                        Ver mais <iconify-icon icon="solar:arrow-right-linear" width="14"></iconify-icon>
+                    </button>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group flex flex-col justify-between p-7 rounded-2xl border border-slate-100 bg-slate-50 hover:border-[#7f1d1d]/25 hover:bg-white hover:shadow-lg transition-all duration-300">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-[#7f1d1d] mb-5 shadow-sm group-hover:scale-110 transition-transform duration-300">
+                            <iconify-icon icon="solar:shield-check-linear" width="22"></iconify-icon>
+                        </div>
+                        <h3 class="text-base font-serif font-medium text-slate-900 leading-snug mb-1">Avaliação para Porte de Arma</h3>
+                        <p class="text-xs text-slate-400 mb-5">Laudos conforme CFP e legislação</p>
+                    </div>
+                    <button onclick="openEvalModal('porte')" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#7f1d1d] hover:gap-3 transition-all duration-200">
+                        Ver mais <iconify-icon icon="solar:arrow-right-linear" width="14"></iconify-icon>
+                    </button>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group flex flex-col justify-between p-7 rounded-2xl border border-slate-100 bg-slate-50 hover:border-[#7f1d1d]/25 hover:bg-white hover:shadow-lg transition-all duration-300">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-[#7f1d1d] mb-5 shadow-sm group-hover:scale-110 transition-transform duration-300">
+                            <iconify-icon icon="solar:heart-pulse-linear" width="22"></iconify-icon>
+                        </div>
+                        <h3 class="text-base font-serif font-medium text-slate-900 leading-snug mb-1">Avaliação para Bariátrica</h3>
+                        <p class="text-xs text-slate-400 mb-5">Exigida nos protocolos cirúrgicos</p>
+                    </div>
+                    <button onclick="openEvalModal('bariatrica')" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#7f1d1d] hover:gap-3 transition-all duration-200">
+                        Ver mais <iconify-icon icon="solar:arrow-right-linear" width="14"></iconify-icon>
+                    </button>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="group flex flex-col justify-between p-7 rounded-2xl border border-slate-100 bg-slate-50 hover:border-[#7f1d1d]/25 hover:bg-white hover:shadow-lg transition-all duration-300">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-[#7f1d1d] mb-5 shadow-sm group-hover:scale-110 transition-transform duration-300">
+                            <iconify-icon icon="solar:scale-linear" width="22"></iconify-icon>
+                        </div>
+                        <h3 class="text-base font-serif font-medium text-slate-900 leading-snug mb-1">Avaliação Jurídica</h3>
+                        <p class="text-xs text-slate-400 mb-5">Laudos e perícias psicológicas</p>
+                    </div>
+                    <button onclick="openEvalModal('juridica')" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#7f1d1d] hover:gap-3 transition-all duration-200">
+                        Ver mais <iconify-icon icon="solar:arrow-right-linear" width="14"></iconify-icon>
+                    </button>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="group flex flex-col justify-between p-7 rounded-2xl border border-slate-100 bg-slate-50 hover:border-[#7f1d1d]/25 hover:bg-white hover:shadow-lg transition-all duration-300">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-[#7f1d1d] mb-5 shadow-sm group-hover:scale-110 transition-transform duration-300">
+                            <iconify-icon icon="solar:book-2-linear" width="22"></iconify-icon>
+                        </div>
+                        <h3 class="text-base font-serif font-medium text-slate-900 leading-snug mb-1">Avaliação Psicopedagógica</h3>
+                        <p class="text-xs text-slate-400 mb-5">Dificuldades de aprendizagem</p>
+                    </div>
+                    <button onclick="openEvalModal('psicopedagogica')" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#7f1d1d] hover:gap-3 transition-all duration-200">
+                        Ver mais <iconify-icon icon="solar:arrow-right-linear" width="14"></iconify-icon>
+                    </button>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="group flex flex-col justify-between p-7 rounded-2xl border border-slate-100 bg-slate-50 hover:border-[#7f1d1d]/25 hover:bg-white hover:shadow-lg transition-all duration-300">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-[#7f1d1d] mb-5 shadow-sm group-hover:scale-110 transition-transform duration-300">
+                            <iconify-icon icon="solar:buildings-2-linear" width="22"></iconify-icon>
+                        </div>
+                        <h3 class="text-base font-serif font-medium text-slate-900 leading-snug mb-1">Avaliação Organizacional</h3>
+                        <p class="text-xs text-slate-400 mb-5">NR-1 · Riscos psicossociais</p>
+                    </div>
+                    <button onclick="openEvalModal('organizacional')" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#7f1d1d] hover:gap-3 transition-all duration-200">
+                        Ver mais <iconify-icon icon="solar:arrow-right-linear" width="14"></iconify-icon>
+                    </button>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="group flex flex-col justify-between p-7 rounded-2xl border border-slate-100 bg-slate-50 hover:border-[#7f1d1d]/25 hover:bg-white hover:shadow-lg transition-all duration-300">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-[#7f1d1d] mb-5 shadow-sm group-hover:scale-110 transition-transform duration-300">
+                            <iconify-icon icon="solar:compass-linear" width="22"></iconify-icon>
+                        </div>
+                        <h3 class="text-base font-serif font-medium text-slate-900 leading-snug mb-1">Orientação Profissional e Vocacional</h3>
+                        <p class="text-xs text-slate-400 mb-5">Adolescentes e adultos</p>
+                    </div>
+                    <button onclick="openEvalModal('orientacao')" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#7f1d1d] hover:gap-3 transition-all duration-200">
+                        Ver mais <iconify-icon icon="solar:arrow-right-linear" width="14"></iconify-icon>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Evaluation Modal -->
+    <div id="eval-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4" role="dialog" aria-modal="true">
+        <div class="absolute inset-0 bg-slate-900/50 backdrop-blur-sm" onclick="closeEvalModal()"></div>
+        <div id="eval-modal-panel" class="relative bg-white rounded-3xl shadow-2xl max-w-lg w-full p-8 md:p-10 overflow-y-auto max-h-[90vh] translate-y-4 opacity-0">
+            <button onclick="closeEvalModal()" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-500 transition-colors">
+                <iconify-icon icon="solar:close-linear" width="18"></iconify-icon>
+            </button>
+            <div id="eval-modal-icon" class="w-12 h-12 rounded-2xl border border-slate-200 flex items-center justify-center text-[#7f1d1d] mb-6 shadow-sm"></div>
+            <h3 id="eval-modal-title" class="text-2xl font-serif font-medium text-slate-900 mb-1"></h3>
+            <p id="eval-modal-tag" class="text-xs text-[#d97706] font-semibold uppercase tracking-wider mb-6"></p>
+            <div id="eval-modal-body" class="text-sm text-slate-500 leading-relaxed space-y-4"></div>
+            <div class="mt-8 pt-6 border-t border-slate-100">
+                <a href="https://api.whatsapp.com/send/?phone=5511985593454&text&type=phone_number&app_absent=0" class="inline-flex items-center justify-center w-full px-6 py-3 text-sm font-medium text-white bg-[#7f1d1d] rounded-full hover:bg-[#991b1b] transition-colors shadow-lg shadow-[#7f1d1d]/20">
+                    Agendar esta Avaliação
+                    <iconify-icon icon="solar:arrow-right-linear" class="ml-2" width="16"></iconify-icon>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- Team Section -->
     <section id="equipe" class="py-24 bg-[#fffbf0] border-y border-[#d97706]/10">
@@ -508,6 +680,137 @@
                         </p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Palestras -->
+    <section id="palestras" class="py-24 bg-slate-50 border-b border-slate-100 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Header with decorative elements -->
+            <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
+                <div class="max-w-2xl">
+                    <span class="text-[#d97706] font-semibold text-xs tracking-widest uppercase mb-2 block">Palestras &amp; Treinamentos</span>
+                    <h2 class="text-4xl font-serif text-slate-900 mb-4 tracking-tight">Levamos o Conhecimento até Você</h2>
+                    <p class="text-slate-500">Palestras e workshops especializados para empresas, escolas e instituições, abordando saúde mental, neurodesenvolvimento e bem-estar.</p>
+                </div>
+                <a href="https://api.whatsapp.com/send/?phone=5511985593454&text&type=phone_number&app_absent=0" class="shrink-0 inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-[#7f1d1d] rounded-full hover:bg-[#991b1b] transition-colors shadow-lg shadow-[#7f1d1d]/20 hover:shadow-xl hover:-translate-y-0.5">
+                    Solicitar palestra
+                    <iconify-icon icon="solar:arrow-right-linear" class="ml-2" width="16"></iconify-icon>
+                </a>
+            </div>
+
+            <!-- Palestras Grid -->
+            <div class="grid md:grid-cols-3 gap-7">
+
+                <!-- Palestra 1 -->
+                <div class="group flex flex-col rounded-2xl bg-white border border-slate-100 overflow-hidden hover:border-[#7f1d1d]/20 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
+                    <div class="relative aspect-[16/9] overflow-hidden">
+                        <img src="/palestras/neurodivergencia-depressao-anseidade.jpg" alt="Saúde Mental no Trabalho" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-5">
+                            <span class="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-white/90 bg-[#7f1d1d] px-3 py-1 rounded-full backdrop-blur-sm">
+                                <iconify-icon icon="solar:heart-linear" width="12"></iconify-icon> Saúde Mental
+                            </span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col flex-1 p-6">
+                        <h3 class="text-lg font-serif font-medium text-slate-900 leading-snug mb-2 group-hover:text-[#7f1d1d] transition-colors">Neurodivergência, Depressão e Ansiedade</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-5 flex-1">Uma palestra que desmistifica os transtornos mais prevalentes da atualidade. Abordamos o que é neurodivergência, como a depressão e a ansiedade se manifestam no cotidiano, quais os sinais de alerta e de que forma empresas, escolas e famílias podem oferecer suporte real a quem convive com essas condições.</p>
+                        <div class="flex flex-wrap gap-2 mb-5 pt-4 border-t border-slate-100">
+                            <span class="inline-flex items-center gap-1.5 text-xs text-slate-500 bg-slate-50 px-2.5 py-1 rounded-full">
+                                <iconify-icon icon="solar:clock-linear" width="12"></iconify-icon> 1h30
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 text-xs text-slate-500 bg-slate-50 px-2.5 py-1 rounded-full">
+                                <iconify-icon icon="solar:buildings-2-linear" width="12"></iconify-icon> Empresas
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 text-xs text-slate-500 bg-slate-50 px-2.5 py-1 rounded-full">
+                                <iconify-icon icon="solar:monitor-smartphone-linear" width="12"></iconify-icon> Presencial ou Online
+                            </span>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=5511985593454&text&type=phone_number&app_absent=0" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#7f1d1d] hover:gap-3 transition-all duration-200">
+                            Solicitar esta palestra <iconify-icon icon="solar:arrow-right-linear" width="14"></iconify-icon>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Palestra 2 -->
+                <div class="group flex flex-col rounded-2xl bg-white border border-slate-100 overflow-hidden hover:border-[#7f1d1d]/20 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
+                    <div class="relative aspect-[16/9] overflow-hidden">
+                        <img src="/palestras/workshop.jpg" alt="TDAH e TEA na Escola" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-5">
+                            <span class="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-white/90 bg-[#d97706] px-3 py-1 rounded-full backdrop-blur-sm">
+                                <iconify-icon icon="solar:diploma-linear" width="12"></iconify-icon> Workshop
+                            </span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col flex-1 p-6">
+                        <h3 class="text-lg font-serif font-medium text-slate-900 leading-snug mb-2 group-hover:text-[#7f1d1d] transition-colors">Workshop para Psicólogos: Avaliação Psicológica na Prática</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-5 flex-1">Treinamento prático voltado a psicólogos que desejam aprimorar suas competências em avaliação psicológica. Discutimos casos clínicos reais, protocolos de testagem, elaboração de laudos e as principais atualizações nas normas do CFP — com espaço para troca de experiências e supervisão técnica.</p>
+                        <div class="flex flex-wrap gap-2 mb-5 pt-4 border-t border-slate-100">
+                            <span class="inline-flex items-center gap-1.5 text-xs text-slate-500 bg-slate-50 px-2.5 py-1 rounded-full">
+                                <iconify-icon icon="solar:clock-linear" width="12"></iconify-icon> 2h
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 text-xs text-slate-500 bg-slate-50 px-2.5 py-1 rounded-full">
+                                <iconify-icon icon="solar:book-2-linear" width="12"></iconify-icon> Equipes
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 text-xs text-slate-500 bg-slate-50 px-2.5 py-1 rounded-full">
+                                <iconify-icon icon="solar:monitor-smartphone-linear" width="12"></iconify-icon> Presencial ou Online
+                            </span>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=5511985593454&text&type=phone_number&app_absent=0" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#7f1d1d] hover:gap-3 transition-all duration-200">
+                            Solicitar esta palestra <iconify-icon icon="solar:arrow-right-linear" width="14"></iconify-icon>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Palestra 3 -->
+                <div class="group flex flex-col rounded-2xl bg-white border border-slate-100 overflow-hidden hover:border-[#7f1d1d]/20 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500">
+                    <div class="relative aspect-[16/9] overflow-hidden">
+                        <img src="/palestras/orientacao-vocacional.jpeg" alt="Inteligência Emocional" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-5">
+                            <span class="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-white/90 bg-slate-700 px-3 py-1 rounded-full backdrop-blur-sm">
+                                <iconify-icon icon="solar:heart-pulse-linear" width="12"></iconify-icon> Orientação
+                            </span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col flex-1 p-6">
+                        <h3 class="text-lg font-serif font-medium text-slate-900 leading-snug mb-2 group-hover:text-[#7f1d1d] transition-colors">Orientação Vocacional: Quem Sou e Para Onde Vou?</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-5 flex-1">Palestra interativa sobre autoconhecimento e escolha profissional, desenvolvida especialmente para adolescentes em fase de vestibular e jovens adultos em transição de carreira. Exploramos perfis de personalidade, habilidades, valores e como alinhar esses elementos a uma escolha profissional mais consciente e satisfatória.</p>
+                        <div class="flex flex-wrap gap-2 mb-5 pt-4 border-t border-slate-100">
+                            <span class="inline-flex items-center gap-1.5 text-xs text-slate-500 bg-slate-50 px-2.5 py-1 rounded-full">
+                                <iconify-icon icon="solar:clock-linear" width="12"></iconify-icon> 3h
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 text-xs text-slate-500 bg-slate-50 px-2.5 py-1 rounded-full">
+                                <iconify-icon icon="solar:users-group-rounded-linear" width="12"></iconify-icon> Escolas
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 text-xs text-slate-500 bg-slate-50 px-2.5 py-1 rounded-full">
+                                <iconify-icon icon="solar:buildings-2-linear" width="12"></iconify-icon> Presencial
+                            </span>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=5511985593454&text&type=phone_number&app_absent=0" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#7f1d1d] hover:gap-3 transition-all duration-200">
+                            Solicitar esta palestra <iconify-icon icon="solar:arrow-right-linear" width="14"></iconify-icon>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CTA box -->
+            <div class="mt-14 rounded-2xl bg-[#7f1d1d] p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
+                <div class="absolute -right-10 -top-10 w-48 h-48 bg-white/5 rounded-full blur-2xl"></div>
+                <div class="absolute -left-6 -bottom-6 w-32 h-32 bg-white/5 rounded-full blur-xl"></div>
+                <div class="relative z-10">
+                    <h3 class="text-xl font-serif font-medium text-white mb-1">Tema personalizado para a sua organização?</h3>
+                    <p class="text-sm text-white/70">Entre em contato e montamos uma proposta sob medida para a sua demanda.</p>
+                </div>
+                <a href="https://api.whatsapp.com/send/?phone=5511985593454&text&type=phone_number&app_absent=0" class="relative z-10 shrink-0 inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-[#7f1d1d] bg-white rounded-full hover:bg-slate-100 transition-colors shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                    Falar com a equipe
+                    <iconify-icon icon="solar:arrow-right-linear" class="ml-2" width="16"></iconify-icon>
+                </a>
             </div>
         </div>
     </section>
@@ -668,6 +971,187 @@
         if (testimonialCards.length > 0) {
             showTestimonial(0);
         }
+
+        // ── Evaluation Modal ──────────────────────────────────────────
+        const evalData = {
+            neuropsico: {
+                icon: 'solar:health-linear',
+                title: 'Avaliação Neuropsicológica',
+                tag: 'Infantil · Adulto · Idoso · Presencial ou Online',
+                body: `
+                    <p>A avaliação neuropsicológica é um processo investigativo detalhado do <strong>funcionamento cognitivo, emocional e comportamental</strong> do indivíduo, realizado por meio de entrevistas clínicas e instrumentos padronizados e validados para o Brasil.</p>
+                    <p><strong>Indicada para suspeita de:</strong></p>
+                    <ul class="list-none space-y-1.5">
+                        <li class="flex items-start gap-2"><span class="mt-1 w-1.5 h-1.5 rounded-full bg-[#7f1d1d] shrink-0"></span>TDAH (Transtorno do Déficit de Atenção e Hiperatividade)</li>
+                        <li class="flex items-start gap-2"><span class="mt-1 w-1.5 h-1.5 rounded-full bg-[#7f1d1d] shrink-0"></span>TEA (Transtorno do Espectro Autista)</li>
+                        <li class="flex items-start gap-2"><span class="mt-1 w-1.5 h-1.5 rounded-full bg-[#7f1d1d] shrink-0"></span>Dificuldades de aprendizagem e transtornos do neurodesenvolvimento</li>
+                        <li class="flex items-start gap-2"><span class="mt-1 w-1.5 h-1.5 rounded-full bg-[#7f1d1d] shrink-0"></span>Declínio cognitivo, demências e condições neurológicas diversas</li>
+                    </ul>
+                    <p>Atendemos <strong>crianças, adolescentes, adultos e idosos</strong>, com protocolos e instrumentos adaptados para cada faixa etária. O processo inclui anamnese, aplicação de testes e devolutiva completa com orientações e encaminhamentos.</p>
+                    <p><strong>Resultado:</strong> Laudo neuropsicológico técnico para uso clínico, escolar, jurídico ou previdenciário.</p>
+                    <div class="mt-2 p-4 rounded-xl bg-[#fff8f8] border border-[#7f1d1d]/15">
+                        <p class="flex items-center gap-2 text-xs font-semibold text-[#7f1d1d] mb-2"><iconify-icon icon="solar:monitor-smartphone-linear" width="14"></iconify-icon> Atendimento também disponível online</p>
+                        <p class="text-xs text-slate-500">Realizamos a avaliação de forma totalmente remota, com a mesma qualidade técnica e rigor científico do atendimento presencial. Ideal para pacientes de qualquer lugar do Brasil ou que preferem praticidade. O laudo tem a mesma validade clínica, escolar, jurídica ou previdenciária.</p>
+                    </div>
+                `
+            },
+            personalidade: {
+                icon: 'solar:user-circle-linear',
+                title: 'Avaliação de Personalidade',
+                tag: 'Com aplicação do Método de Rorschach',
+                body: `
+                    <p>A avaliação de personalidade investiga os <strong>traços, dinâmicas emocionais e padrões de funcionamento psíquico</strong> do indivíduo. Em nossa clínica, utilizamos o <strong>Método de Rorschach</strong> — uma das ferramentas mais completas e reconhecidas da psicologia clínica — em conjunto com outros instrumentos padronizados.</p>
+                    <p><strong>Indicada para:</strong></p>
+                    <ul class="list-none space-y-1.5">
+                        <li class="flex items-start gap-2"><span class="mt-1 w-1.5 h-1.5 rounded-full bg-[#7f1d1d] shrink-0"></span>Autoconhecimento aprofundado</li>
+                        <li class="flex items-start gap-2"><span class="mt-1 w-1.5 h-1.5 rounded-full bg-[#7f1d1d] shrink-0"></span>Planejamento e direcionamento terapêutico</li>
+                        <li class="flex items-start gap-2"><span class="mt-1 w-1.5 h-1.5 rounded-full bg-[#7f1d1d] shrink-0"></span>Investigação de padrões emocionais e relacionais</li>
+                        <li class="flex items-start gap-2"><span class="mt-1 w-1.5 h-1.5 rounded-full bg-[#7f1d1d] shrink-0"></span>Contextos clínicos que demandam compreensão aprofundada da estrutura de personalidade</li>
+                    </ul>
+                    <p><strong>Resultado:</strong> Relatório interpretativo detalhado sobre estrutura de personalidade, recursos internos e áreas de vulnerabilidade emocional.</p>
+                `
+            },
+            porte: {
+                icon: 'solar:shield-check-linear',
+                title: 'Avaliação para Porte de Arma',
+                tag: 'Conforme normas CFP e legislação vigente',
+                body: `
+                    <p>Avaliação psicológica realizada conforme critérios técnicos e éticos estabelecidos pelo <strong>Conselho Federal de Psicologia (CFP)</strong> e pela legislação em vigor para registro e posse de armas de fogo.</p>
+                    <p><strong>O processo investiga:</strong></p>
+                    <ul class="list-none space-y-1.5">
+                        <li class="flex items-start gap-2"><span class="mt-1 w-1.5 h-1.5 rounded-full bg-[#7f1d1d] shrink-0"></span>Controle emocional e manejo da impulsividade</li>
+                        <li class="flex items-start gap-2"><span class="mt-1 w-1.5 h-1.5 rounded-full bg-[#7f1d1d] shrink-0"></span>Capacidade atencional e tomada de decisão sob pressão</li>
+                        <li class="flex items-start gap-2"><span class="mt-1 w-1.5 h-1.5 rounded-full bg-[#7f1d1d] shrink-0"></span>Perfil psicológico para manuseio seguro e responsável de armas de fogo</li>
+                    </ul>
+                    <p><strong>Resultado:</strong> Laudo psicológico oficial para fins de registro ou renovação de porte de arma, conforme normas do SINARM e da Polícia Federal.</p>
+                `
+            },
+            bariatrica: {
+                icon: 'solar:heart-pulse-linear',
+                title: 'Avaliação para Cirurgia Bariátrica',
+                tag: 'Obrigatória nos protocolos cirúrgicos',
+                body: `
+                    <p>Avaliação psicológica obrigatória nos protocolos de <strong>cirurgia bariátrica</strong>, realizada conforme as diretrizes do CFP e das equipes multidisciplinares de saúde.</p>
+                    <p><strong>O processo analisa:</strong></p>
+                    <ul class="list-none space-y-1.5">
+                        <li class="flex items-start gap-2"><span class="mt-1 w-1.5 h-1.5 rounded-full bg-[#7f1d1d] shrink-0"></span>O vínculo emocional com a alimentação e o histórico do comportamento alimentar</li>
+                        <li class="flex items-start gap-2"><span class="mt-1 w-1.5 h-1.5 rounded-full bg-[#7f1d1d] shrink-0"></span>Expectativas realistas sobre o procedimento e o pós-operatório</li>
+                        <li class="flex items-start gap-2"><span class="mt-1 w-1.5 h-1.5 rounded-full bg-[#7f1d1d] shrink-0"></span>Condições emocionais e psicológicas que podem impactar a recuperação e a manutenção dos resultados a longo prazo</li>
+                    </ul>
+                    <p><strong>Resultado:</strong> Laudo psicológico para composição do processo cirúrgico, com orientações para a equipe de saúde.</p>
+                `
+            },
+            juridica: {
+                icon: 'solar:scale-linear',
+                title: 'Avaliação Psicológica Jurídica',
+                tag: 'Laudos e perícias para demandas judiciais',
+                body: `
+                    <p>Avaliações psicológicas realizadas conforme demandas técnicas e judiciais específicas, em total conformidade com as normas do <strong>CFP</strong> e do sistema judiciário brasileiro.</p>
+                    <p><strong>Áreas de atuação:</strong></p>
+                    <ul class="list-none space-y-1.5">
+                        <li class="flex items-start gap-2"><span class="mt-1 w-1.5 h-1.5 rounded-full bg-[#7f1d1d] shrink-0"></span>Avaliações para guarda e regulamentação de visitas</li>
+                        <li class="flex items-start gap-2"><span class="mt-1 w-1.5 h-1.5 rounded-full bg-[#7f1d1d] shrink-0"></span>Situações de alienação parental</li>
+                        <li class="flex items-start gap-2"><span class="mt-1 w-1.5 h-1.5 rounded-full bg-[#7f1d1d] shrink-0"></span>Avaliação de capacidade civil e interdição</li>
+                        <li class="flex items-start gap-2"><span class="mt-1 w-1.5 h-1.5 rounded-full bg-[#7f1d1d] shrink-0"></span>Perícias psicológicas em processos trabalhistas e criminais</li>
+                    </ul>
+                    <p>Nossa profissional atua como <strong>psicóloga assistente técnica</strong>, elaborando laudos e pareceres com rigor científico e compromisso ético.</p>
+                `
+            },
+            psicopedagogica: {
+                icon: 'solar:book-2-linear',
+                title: 'Avaliação Psicopedagógica',
+                tag: 'Dificuldades e transtornos de aprendizagem',
+                body: `
+                    <p>Investigação detalhada do desempenho escolar e dos processos cognitivos envolvidos na aprendizagem, incluindo <strong>memória, atenção, processamento fonológico, leitura e escrita</strong>.</p>
+                    <p><strong>Indicada para:</strong></p>
+                    <ul class="list-none space-y-1.5">
+                        <li class="flex items-start gap-2"><span class="mt-1 w-1.5 h-1.5 rounded-full bg-[#7f1d1d] shrink-0"></span>Dificuldades escolares persistentes em leitura, escrita ou matemática</li>
+                        <li class="flex items-start gap-2"><span class="mt-1 w-1.5 h-1.5 rounded-full bg-[#7f1d1d] shrink-0"></span>Suspeita de Dislexia, Discalculia, Disortografia ou outros transtornos de aprendizagem</li>
+                        <li class="flex items-start gap-2"><span class="mt-1 w-1.5 h-1.5 rounded-full bg-[#7f1d1d] shrink-0"></span>Investigação do TDAH no contexto educacional</li>
+                        <li class="flex items-start gap-2"><span class="mt-1 w-1.5 h-1.5 rounded-full bg-[#7f1d1d] shrink-0"></span>Crianças com queixa escolar sem diagnóstico definido</li>
+                    </ul>
+                    <p><strong>Resultado:</strong> Relatório psicopedagógico com orientações práticas para a família, escola e demais profissionais envolvidos no cuidado do paciente.</p>
+                `
+            },
+            organizacional: {
+                icon: 'solar:buildings-2-linear',
+                title: 'Avaliação Organizacional',
+                tag: 'NR-1 · Riscos psicossociais no trabalho',
+                body: `
+                    <p>Com as novas diretrizes da <strong>NR-1</strong> (Norma Regulamentadora nº 1), as empresas passaram a ter obrigação de <strong>identificar e gerenciar os riscos psicossociais</strong> no ambiente de trabalho. Nossa avaliação oferece suporte técnico e psicológico para o cumprimento desta exigência.</p>
+                    <p><strong>O que oferecemos:</strong></p>
+                    <ul class="list-none space-y-1.5">
+                        <li class="flex items-start gap-2"><span class="mt-1 w-1.5 h-1.5 rounded-full bg-[#7f1d1d] shrink-0"></span>Mapeamento de perfil comportamental e emocional de colaboradores</li>
+                        <li class="flex items-start gap-2"><span class="mt-1 w-1.5 h-1.5 rounded-full bg-[#7f1d1d] shrink-0"></span>Suporte a processos seletivos com foco em fit cultural e identificação de riscos</li>
+                        <li class="flex items-start gap-2"><span class="mt-1 w-1.5 h-1.5 rounded-full bg-[#7f1d1d] shrink-0"></span>Elaboração de laudos e pareceres para fins de saúde ocupacional</li>
+                        <li class="flex items-start gap-2"><span class="mt-1 w-1.5 h-1.5 rounded-full bg-[#7f1d1d] shrink-0"></span>Apoio à promoção de bem-estar e saúde mental no ambiente organizacional</li>
+                    </ul>
+                    <p><strong>Indicada para:</strong> Empresas que precisam cumprir as exigências da NR-1, gestores de RH e departamentos de saúde ocupacional.</p>
+                `
+            },
+            orientacao: {
+                icon: 'solar:compass-linear',
+                title: 'Orientação Profissional e Vocacional',
+                tag: 'Adolescentes e adultos',
+                body: `
+                    <p>Processo estruturado de <strong>autoconhecimento</strong> voltado à escolha ou redefinição do projeto profissional. Utilizamos instrumentos psicológicos validados aliados a uma escuta clínica qualificada.</p>
+                    <p><strong>Exploramos juntos:</strong></p>
+                    <ul class="list-none space-y-1.5">
+                        <li class="flex items-start gap-2"><span class="mt-1 w-1.5 h-1.5 rounded-full bg-[#7f1d1d] shrink-0"></span>Interesses, habilidades e aptidões individuais</li>
+                        <li class="flex items-start gap-2"><span class="mt-1 w-1.5 h-1.5 rounded-full bg-[#7f1d1d] shrink-0"></span>Perfil psicológico, valores pessoais e estilo de trabalho</li>
+                        <li class="flex items-start gap-2"><span class="mt-1 w-1.5 h-1.5 rounded-full bg-[#7f1d1d] shrink-0"></span>Possibilidades de carreira e contexto do mercado de trabalho</li>
+                    </ul>
+                    <p><strong>Para adolescentes:</strong> Apoio na escolha do curso superior e planejamento do início da vida profissional.</p>
+                    <p><strong>Para adultos:</strong> Indicado para transição de carreira, recolocação profissional e redefinição de objetivos de vida. Inclui também orientação de carreira para profissionais já inseridos no mercado que buscam novos direcionamentos.</p>
+                `
+            }
+        };
+
+        function openEvalModal(key) {
+            const data = evalData[key];
+            if (!data) return;
+
+            document.getElementById('eval-modal-icon').innerHTML = `<iconify-icon icon="${data.icon}" width="24"></iconify-icon>`;
+            document.getElementById('eval-modal-title').textContent = data.title;
+            document.getElementById('eval-modal-tag').textContent = data.tag;
+            document.getElementById('eval-modal-body').innerHTML = data.body;
+
+            const modal = document.getElementById('eval-modal');
+            const panel = document.getElementById('eval-modal-panel');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+
+            // Trigger animation
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    panel.style.transform = 'translateY(0)';
+                    panel.style.opacity = '1';
+
+                    // Re-render iconify icons inside modal
+                    if (typeof Iconify !== 'undefined') {
+                        Iconify.scan(document.getElementById('eval-modal-icon'));
+                    }
+                });
+            });
+        }
+
+        function closeEvalModal() {
+            const modal = document.getElementById('eval-modal');
+            const panel = document.getElementById('eval-modal-panel');
+
+            panel.style.transform = 'translateY(16px)';
+            panel.style.opacity = '0';
+
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 320);
+        }
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeEvalModal();
+        });
     </script>
 
 </body>
