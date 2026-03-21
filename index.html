@@ -592,8 +592,12 @@
     </div>
 
     <!-- Team Section -->
-    <section id="equipe" class="py-24 bg-[#fffbf0] border-y border-[#d97706]/10">
-        <div class="max-w-7xl mx-auto px-6">
+    <section id="equipe" class="py-24 bg-[#fffbf0] border-y border-[#d97706]/10 relative overflow-hidden">
+        <!-- Decorative background elements -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-[#7f1d1d]/[0.03] rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 bg-[#d97706]/[0.04] rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center max-w-3xl mx-auto mb-20">
                 <span class="text-[#d97706] font-semibold text-xs tracking-widest uppercase mb-2 block">Especialistas</span>
                 <h2 class="text-4xl font-serif text-slate-900 mb-6">Nossa Equipe</h2>
@@ -602,99 +606,157 @@
                 </p>
             </div>
 
-            <!-- Nadir — Destaque Fundadora -->
-            <div class="group bg-white rounded-2xl overflow-hidden border border-[#7f1d1d]/20 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 mb-8">
-                <div class="flex flex-col md:flex-row">
-                    <!-- Foto -->
-                    <div class="md:w-72 lg:w-80 shrink-0 aspect-square md:aspect-auto bg-slate-200 relative overflow-hidden">
-                        <img src="/doutoras/nadir.png" class="h-full w-full object-cover object-top" alt="Nadir Rodrigues">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:to-black/10"></div>
-                    </div>
-                    <!-- Conteúdo -->
-                    <div class="flex flex-col justify-center p-8 md:p-10 flex-1">
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-white bg-[#7f1d1d] px-3 py-1 rounded-full">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                Fundadora
-                            </span>
-                            <span class="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-[#7f1d1d] bg-[#7f1d1d]/10 px-3 py-1 rounded-full">
-                                Responsável Técnica
-                            </span>
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <!-- Nadir — Destaque Líder / Fundadora                       -->
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <div class="relative group mb-14">
+                <!-- Glow accent behind the card -->
+                <div class="absolute -inset-1 bg-gradient-to-r from-[#7f1d1d]/20 via-[#d97706]/15 to-[#7f1d1d]/20 rounded-[1.25rem] blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+
+                <div class="relative bg-white rounded-2xl overflow-hidden border border-[#7f1d1d]/20 shadow-xl hover:shadow-2xl transition-all duration-500">
+                    <div class="flex flex-col lg:flex-row">
+                        <!-- Foto -->
+                        <div class="lg:w-[22rem] shrink-0 aspect-square lg:aspect-auto bg-slate-200 relative overflow-hidden">
+                            <img src="/doutoras/nadir.jpeg" class="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105" alt="Nadir Rodrigues">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#7f1d1d]/40 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-white/20"></div>
+                            <!-- Floating badge on image (mobile) -->
+                            <div class="absolute top-4 left-4 lg:hidden">
+                                <span class="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-white bg-[#7f1d1d]/90 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-lg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    Fundadora
+                                </span>
+                            </div>
                         </div>
-                        <h4 class="text-2xl font-serif font-medium text-slate-900 mb-1">Nadir Rodrigues</h4>
-                        <p class="text-[#7f1d1d] text-sm font-semibold mb-4">Neuropsicóloga · CRP 06/115773</p>
-                        <p class="text-sm text-slate-500 leading-relaxed mb-6">
-                            Psicóloga formada pela UNISA, com pós-graduação em Neuropsicologia pelo Instituto de Psiquiatria da USP e extensão em Neurociências pela PUC. Atua há mais de 10 anos na clínica com abordagem cognitivo-comportamental e há 6 anos com avaliações neuropsicológicas. Palestrante, supervisora e psicóloga assistente técnica na área jurídica.
-                        </p>
+
+                        <!-- Conteúdo -->
+                        <div class="flex flex-col justify-center p-8 lg:p-12 flex-1">
+                            <!-- Badges -->
+                            <div class="flex flex-wrap gap-2 mb-5">
+                                <span class="hidden lg:inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-white bg-[#7f1d1d] px-3 py-1.5 rounded-full shadow-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    Fundadora
+                                </span>
+                                <span class="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-[#7f1d1d] bg-[#7f1d1d]/10 px-3 py-1.5 rounded-full">
+                                    Responsável Técnica
+                                </span>
+                                <span class="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-[#d97706] bg-[#d97706]/10 px-3 py-1.5 rounded-full">
+                                    <iconify-icon icon="solar:verified-check-bold" width="12"></iconify-icon>
+                                    Líder do Projeto
+                                </span>
+                            </div>
+
+                            <h4 class="text-3xl lg:text-4xl font-serif font-medium text-slate-900 mb-2">Nadir Rodrigues</h4>
+                            <p class="text-[#7f1d1d] text-sm font-semibold mb-5">Neuropsicóloga · CRP 06/115773</p>
+
+                            <p class="text-slate-500 leading-relaxed mb-8 max-w-2xl">
+                                Psicóloga formada pela UNISA, com pós-graduação em Neuropsicologia pelo Instituto de Psiquiatria da USP e extensão em Neurociências pela PUC. Atua há mais de 10 anos na clínica com abordagem cognitivo-comportamental e há 6 anos com avaliações neuropsicológicas. Palestrante, supervisora e psicóloga assistente técnica na área jurídica.
+                            </p>
+
+                            <!-- Highlights -->
+                            <div class="flex flex-wrap gap-4">
+                                <div class="flex items-center gap-2 text-sm text-slate-600">
+                                    <div class="w-8 h-8 rounded-full bg-[#7f1d1d]/10 flex items-center justify-center">
+                                        <iconify-icon icon="solar:diploma-linear" class="text-[#7f1d1d]" width="16"></iconify-icon>
+                                    </div>
+                                    <span>Pós-graduação USP</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-sm text-slate-600">
+                                    <div class="w-8 h-8 rounded-full bg-[#d97706]/10 flex items-center justify-center">
+                                        <iconify-icon icon="solar:clock-circle-linear" class="text-[#d97706]" width="16"></iconify-icon>
+                                    </div>
+                                    <span>+10 anos de experiência</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-sm text-slate-600">
+                                    <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">
+                                        <iconify-icon icon="solar:presentation-graph-linear" class="text-slate-600" width="16"></iconify-icon>
+                                    </div>
+                                    <span>Palestrante e Supervisora</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <!-- Equipe — Grid de profissionais                            -->
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <div class="flex flex-wrap justify-center gap-8 [&>*]:w-full [&>*]:md:w-[calc(50%-1rem)] [&>*]:lg:w-[calc(33.333%-1.34rem)]">
 
-                <!-- Doctor 2 -->
-                <div class="group bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-[#7f1d1d]/20 transition-all hover:shadow-xl hover:-translate-y-1">
+                <!-- Elaine Leite -->
+                <div class="group bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-[#7f1d1d]/20 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                     <div class="aspect-[4/4] bg-slate-200 relative overflow-hidden">
-                         <div class="absolute inset-0 bg-slate-300 flex items-center justify-center text-slate-400">
-                            <img src="/doutoras/priscila.jpg" class="h-full w-full object-cover" alt="Priscila Roza">
-                        </div>
+                        <img src="/doutoras/elaine.jpeg" class="h-full w-full object-cover object-top group-hover:scale-105 transition-transform duration-700" alt="Elaine Leite">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     </div>
                     <div class="p-6">
-                        <h4 class="text-xl font-serif font-medium text-slate-900">Priscila Roza</h4>
-                        <p class="text-[#7f1d1d] text-sm font-medium mb-1">Psicóloga Clínica</p>
-                        <p class="text-sm text-slate-500 leading-relaxed mb-4">
-                            Psicóloga clínica, pós-graduada em Análise do Comportamento Aplicada à Clínica, com capacitação em atendimento a mulheres, manejo de relacionamentos abusivos 
-                            e curso de neurociência do desenvolvimento. Experiência em intervenções com crianças e adolescentes (via ABA), acolhimento em situações de vulnerabilidade e 
-                            suporte emocional em contextos de eventos. Pós-graduanda em Neuropsicologia
+                        <h4 class="text-xl font-serif font-medium text-slate-900">Elaine Leite</h4>
+                        <p class="text-[#7f1d1d] text-sm font-medium mb-3">Psicoterapeuta</p>
+                        <p class="text-sm text-slate-500 leading-relaxed">
+                            Psicoterapeuta com formação em Psicanálise e Terapia Cognitivo-Comportamental Infantil, especialista em Neuropsicologia pelo CETCC. Com uma abordagem que une ciência e acolhimento, Elaine vê a psicoterapia como uma jornada profunda e transformadora para o autoconhecimento, o crescimento pessoal e o equilíbrio emocional.
                         </p>
                     </div>
                 </div>
 
-                <!-- Doctor 3 -->
-                <div class="group bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-[#7f1d1d]/20 transition-all hover:shadow-xl hover:-translate-y-1">
+                <!-- Glória Gomes -->
+                <div class="group bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-[#7f1d1d]/20 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                     <div class="aspect-[4/4] bg-slate-200 relative overflow-hidden">
-                         <div class="absolute inset-0 bg-slate-300 flex items-center justify-center text-slate-400">
-                            <img src="/doutoras/grasiele.jpg" class="h-full w-full object-cover" alt="Grasiele Miranda">
-                        </div>
+                        <img src="/doutoras/gloria.jpeg" class="h-full w-full object-cover object-top group-hover:scale-105 transition-transform duration-700" alt="Glória Gomes">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-serif font-medium text-slate-900">Glória Gomes</h4>
+                        <p class="text-[#7f1d1d] text-sm font-medium mb-3">Psicóloga Clínica</p>
+                        <p class="text-sm text-slate-500 leading-relaxed">
+                            Estudante do 5º ano de Psicologia pela Universidade Nove de Julho, com experiência em gestão de pessoas e estágio em Neuropsicologia. Atua no apoio às rotinas clínicas, organização de prontuários, salas e testes neuropsicológicos, com foco em ética, organização e trabalho em equipe.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Grasiele Miranda -->
+                <div class="group bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-[#7f1d1d]/20 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="aspect-[4/4] bg-slate-200 relative overflow-hidden">
+                        <img src="/doutoras/grasiele.jpeg" class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Grasiele Miranda">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     </div>
                     <div class="p-6">
                         <h4 class="text-xl font-serif font-medium text-slate-900">Grasiele Miranda</h4>
-                        <p class="text-[#7f1d1d] text-sm font-medium mb-1">Psicóloga Clínica</p>
-                        <p class="text-sm text-slate-500 leading-relaxed mb-4">
+                        <p class="text-[#7f1d1d] text-sm font-medium mb-3">Psicóloga Clínica</p>
+                        <p class="text-sm text-slate-500 leading-relaxed">
                             Formada em Psicologia pela Faculdade UNISA, pós graduada em Terapia Cognitivo Comportamental (TCC) e Neuropsicologia pela UNIFIA. 
                             Atua com o foco no aumento da qualidade de vida, acolhimento humanizado e ética profissional.
                         </p>
                     </div>
                 </div>
 
-                <!-- Doctor 4 -->
-                <div class="group bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-[#7f1d1d]/20 transition-all hover:shadow-xl hover:-translate-y-1">
+                <!-- Maria Lúcia Lopes -->
+                <div class="group bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-[#7f1d1d]/20 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                     <div class="aspect-[4/4] bg-slate-200 relative overflow-hidden">
-                         <div class="absolute inset-0 bg-slate-300 flex items-center justify-center text-slate-400">
-                            <img src="/doutoras/gloria.jpeg" class="h-full w-full object-cover" alt="Glória Gomes">
-                        </div>
+                        <img src="/doutoras/maria.png" class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Maria Lúcia Lopes">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     </div>
                     <div class="p-6">
-                        <h4 class="text-xl font-serif font-medium text-slate-900">Glória Gomes</h4>
-                        <p class="text-[#7f1d1d] text-sm font-medium mb-1">Psicóloga Clínica</p>
-                        <p class="text-sm text-slate-500 leading-relaxed mb-4">
-                            Estudante do 5º ano de Psicologia pela Universidade Nove de Julho, com experiência em gestão de pessoas e estágio em Neuropsicologia. Atua no apoio às rotinas clínicas, organização de prontuários, salas e testes neuropsicológicos, com foco em ética, organização e trabalho em equipe.
+                        <h4 class="text-xl font-serif font-medium text-slate-900">Maria Lúcia Lopes</h4>
+                        <p class="text-[#7f1d1d] text-sm font-medium mb-3">Psicopedagoga</p>
+                        <p class="text-sm text-slate-500 leading-relaxed">
+                            Formada pela UNISA e com pós-graduação em Educação Especial pelo SENAC, atua na área desde 2015. Auxilia na identificação de desafios e construção de estratégias para o desenvolvimento cognitivo, emocional e pedagógico de crianças.
                         </p>
                     </div>
                 </div>
 
-                <!-- Doctor 5 -->
-                <div class="group bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-[#7f1d1d]/20 transition-all hover:shadow-xl hover:-translate-y-1">
+                <!-- Priscila Roza -->
+                <div class="group bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-[#7f1d1d]/20 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                     <div class="aspect-[4/4] bg-slate-200 relative overflow-hidden">
-                         <div class="absolute inset-0 bg-slate-100 flex items-center justify-center text-slate-300">
-                             <img src="/doutoras/maria.png" class="h-full w-full object-cover" alt="Maria Lúcia Lopes">
-                        </div>
+                        <img src="/doutoras/priscila.jpeg" class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Priscila Roza">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     </div>
                     <div class="p-6">
-                        <h4 class="text-xl font-serif font-medium text-slate-900">Maria Lúcia Lopes</h4>
-                        <p class="text-[#7f1d1d] text-sm font-medium mb-1">Psicopedagoga</p>
-                        <p class="text-sm text-slate-500 leading-relaxed mb-4">
-                            Formada pela UNISA e com pós-graduação em Educação Especial pelo SENAC, atua na área desde 2015. Auxilia na identificação de desafios e construção de estratégias para o desenvolvimento cognitivo, emocional e pedagógico de crianças.
+                        <h4 class="text-xl font-serif font-medium text-slate-900">Priscila Roza</h4>
+                        <p class="text-[#7f1d1d] text-sm font-medium mb-3">Psicóloga Clínica</p>
+                        <p class="text-sm text-slate-500 leading-relaxed">
+                            Psicóloga clínica, pós-graduada em Análise do Comportamento Aplicada à Clínica, com capacitação em atendimento a mulheres, manejo de relacionamentos abusivos 
+                            e curso de neurociência do desenvolvimento. Experiência em intervenções com crianças e adolescentes (via ABA), acolhimento em situações de vulnerabilidade e 
+                            suporte emocional em contextos de eventos. Pós-graduanda em Neuropsicologia.
                         </p>
                     </div>
                 </div>
